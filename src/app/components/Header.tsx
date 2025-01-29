@@ -7,7 +7,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-gray-800">
-          <img src="/bookmyshow.svg" alt="BookMyShow Logo" />
+          <img src="/bookmyshow.svg" alt="BookMyShow Logo" className="h-10" />
         </Link>
 
         {/* Search Bar */}

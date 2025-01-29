@@ -1,32 +1,15 @@
+// pages/register.tsx
 import { useState } from "react";
 
 const Register = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
   const handleRegister = async () => {
     const formData = { name, email, phone, password };
-
-    try {
-      const response = await fetch("http://localhost:5000/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-      if (data.success) {
-        alert("Registration successful!");
-        // Redirect or reset form if needed
-      } else {
-        alert(data.message || "Registration failed!");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred.");
-    }
+    alert("Registration logic will be here.");
   };
 
   return (

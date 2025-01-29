@@ -1,30 +1,13 @@
+// pages/login.tsx
 import { useState } from "react";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
   const handleLogin = async () => {
     const formData = { email, password };
-
-    try {
-      const response = await fetch("http://localhost:5000/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-      if (data.success) {
-        alert("Login successful!");
-        // Redirect or store user info as needed
-      } else {
-        alert(data.message || "Login failed!");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred.");
-    }
+    alert("Login logic will be here.");
   };
 
   return (
